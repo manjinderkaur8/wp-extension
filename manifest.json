@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "WhatsApp Filter Extension",
+  "version": "1.0",
+  "description": "Enhance WhatsApp Web with chat filtering and custom contact organization.",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://web.whatsapp.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  }
+}
